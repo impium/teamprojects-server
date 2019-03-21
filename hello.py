@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
 from flask import Flask
 app = Flask(__name__)
-
 
 @app.route("/")
 
 def hello():
-    while True:
+    
         test = int(input("Command"))
         if test == 1:
         
@@ -19,9 +17,7 @@ def hello():
             return "no"
 if __name__ == "__main__":
     app.run()
-while True:
-    hello()
-    
+
 def start():
     return "started"
 def stop():
