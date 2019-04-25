@@ -24,9 +24,9 @@ while True:
             bus.write_byte_data(addr,0x06,0)
 
             time.sleep(.25)
-##bus.write_byte_data(addr,0xfe, 0x1e)
+
             bus.write_byte_data(addr,0, 0x20)
-    ##bus.write_word_data(addr,0x08,1250)
+   
 
             time.sleep(2)
             bus.write_word_data(addr,0x08,1600)
@@ -36,19 +36,78 @@ while True:
         elif data == b'killsrv':
             conn.close()
             sys.exit()
-        else:
+        elsif data == b'2':
             bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
 
             bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
-##bus.write_byte_data(addr,0xfe, 0x1e)
+
             bus.write_byte_data(addr,0, 0x20)
-    ##bus.write_word_data(addr,0x0C,1250)
+   
 
             time.sleep(2)
             bus.write_word_data(addr,0x0C,500)
-            time.sleep(2)
-            bus.write_word_data(addr, 0x0C, 2000)
+        elsif data == b'3':
+            bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,750)
+        elsif data == b'4':
+            bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,1000)
+        elsif data == b'5':
+            bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,1250)
+        elsif data == b'6':
+              bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,1500)
+        elsif data == b'7':
+              bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,1750)
+        elsif data == b'8':
+              bus.write_byte_data(addr,0,0x20)
+            time.sleep(.25)
+            bus.write_byte_data(addr,0x06,0)
+
+            time.sleep(.25)
+
+            bus.write_byte_data(addr,0, 0x20)
+   
+            bus.write_byte_data(addr,0x0C,2000)
+        
     except socket.timeout:print("")
