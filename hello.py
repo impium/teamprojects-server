@@ -36,7 +36,7 @@ while True:
         elif data == b'killsrv':
             conn.close()
             sys.exit()
-        elsif data == b'2':
+        elif data == b'2':
             bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
 
@@ -49,65 +49,65 @@ while True:
 
             time.sleep(2)
             bus.write_word_data(addr,0x0C,500)
-        elsif data == b'3':
+        elif data == b'3':
             bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,750)
-        elsif data == b'4':
+            bus.write_word_data(addr,0x0C,750)
+        elif data == b'4':
             bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,1000)
-        elsif data == b'5':
+            bus.write_word_data(addr,0x0C,1000)
+        elif data == b'5':
             bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,1250)
-        elsif data == b'6':
-              bus.write_byte_data(addr,0,0x20)
+            bus.write_word_data(addr,0x0C,1250)
+        elif data == b'6':
+            bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,1500)
+            bus.write_word_data(addr,0x0C,1500)
         elsif data == b'7':
-              bus.write_byte_data(addr,0,0x20)
+            bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,1750)
-        elsif data == b'8':
-              bus.write_byte_data(addr,0,0x20)
+            bus.write_word_data(addr,0x0C,1750)
+        elif data == b'8':
+            bus.write_byte_data(addr,0,0x20)
             time.sleep(.25)
-            bus.write_byte_data(addr,0x06,0)
+            bus.write_byte_data(addr,0x0A,0)
 
             time.sleep(.25)
 
             bus.write_byte_data(addr,0, 0x20)
    
-            bus.write_byte_data(addr,0x0C,2000)
+            bus.write_word_data(addr,0x0C,2000)
         
     except socket.timeout:print("")
